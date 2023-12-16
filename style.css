@@ -61,6 +61,10 @@ body{
   z-index: 1;
 }
 
+.nav__trans {
+  background: transparent;
+}
+
 .nav__logo
 {
   color: var(--clr-heading);
@@ -216,7 +220,7 @@ body{
 
 .connect
 {
-  min-width: 30rem;
+  width: 90% ;
   max-width: 100%;
   height: 20rem;
   display: flex;
@@ -227,7 +231,7 @@ body{
   background-color: #ffffff17;
   border-top-right-radius: 25px;
   border-bottom-right-radius: 25px;
-  border-left: red 5px solid;
+  border-left: rgba(255, 0, 0, 0.627) 6px solid;
   padding: 10px 30px;
 
 }
@@ -244,7 +248,8 @@ body{
 
 .connect__email, .connect__message
 {
-  width: 30rem;
+  min-width: 12rem;
+  width: 60%;
   height: 3rem;
   background-color: rgba(245, 245, 245, 0.151);
   color: var(--clr-bg);
@@ -256,7 +261,7 @@ body{
 
 .connect__btn
 {
-  align-self: flex-end;
+  align-self: center;
 }
 
 
@@ -264,16 +269,52 @@ body{
 /* footer */
 .footer {
   width: 100%;
-  height: 4rem;
+  min-height:4rem ;
   text-align: center;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
   background-color: rgba(245, 245, 245, 0.118);
 }
 
 .footer .footer__list {
   list-style: none;
+  padding: 0 10px;
 
+}
+
+
+
+/* scroll animation  */
+.hidden {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition:all  ease 2s;
+  filter: blur(4px);
+
+}
+
+.show {
+  
+  transform: translateX(0);
+  filter: blur(0px);
+  opacity: 1;
+
+}
+
+
+/* responsive skill section heading */
+
+@media  screen and (max-width:400px) {
+  .skills > .skill__subheading, .skill__heading {
+    position: relative;
+    left: 35px;
+  }
+  .grid .skill__item {
+    width: 230px;
+  }
+  .nav__logo {
+    margin-left: 1rem;
+  }
 }
