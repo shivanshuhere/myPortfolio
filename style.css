@@ -290,7 +290,7 @@ body{
 .hidden {
   opacity: 0;
   transform: translateX(-100%);
-  transition:all  ease 2s;
+  transition:all  ease 1s;
   filter: blur(4px);
 
 }
