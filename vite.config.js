@@ -4,6 +4,6 @@ export default {
       '/@': path.resolve(__dirname, 'src')
     },
     plugins: [],
-    base: '/myPortfolio/'
+    base: '/'
   };
   
